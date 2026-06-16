@@ -38,9 +38,9 @@ class ArticleForm
                     ->default('draft')
                     ->required(),
 
-                TextInput::make('views')
-                    ->numeric()
-                    ->default(0),
+                // TextInput::make('views')
+                //     ->numeric()
+                //     ->default(0),
 
                 DateTimePicker::make('published_at'),
             ]);

@@ -10,8 +10,11 @@ Route::get('/', function () {
     return view('pages.dashboard', compact('articles'));
 });
 
+
 Route::get('/artikel', function () {
     return view('pages.artikel');
 });
 
-Route::get('/article', [ArticleController::class, 'articles.show']);
+
+Route::get('/articles/{slug}', [ArticleController::class, 'show'])
+    ->name('articles.show');

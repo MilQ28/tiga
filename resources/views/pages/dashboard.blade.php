@@ -9,14 +9,17 @@
         <h1>Articles</h1>
         <div>
             @foreach ($articles as $article)
-                <div class="card shadow-sm mb-4">
+                <a href="{{ route('articles.show', $article->slug) }}" class="card shadow-sm mb-4">
                     <div class="card-header">
                         {{ $article->title }}
                     </div>
                     <div class="card-body">
-                        {{ $article->content }}
+                        {{ \Illuminate\Support\Str::limit($article->content, 100) }}
                     </div>
-                </div>
+                    <div>
+                        {{ $article->views }}
+                    </div>
+                </a>
             @endforeach
         </div>
     </div>

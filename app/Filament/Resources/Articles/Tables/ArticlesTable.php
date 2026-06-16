@@ -27,8 +27,10 @@ class ArticlesTable
                     ->badge(),
 
                 Tables\Columns\TextColumn::make('views')
+                    ->label('Views')
+                    ->sortable()
                     ->numeric(),
-
+                    
                 Tables\Columns\TextColumn::make('published_at')
                     ->dateTime(),
 

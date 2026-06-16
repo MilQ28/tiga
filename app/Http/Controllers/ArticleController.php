@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Articles;
 
 class ArticleController extends Controller
 {
-    public function index()
+    public function show($slug)
     {
-        $articles = Articles::latest()->get();
+        $article = Articles::where('slug', $slug)->firstOrFail();
 
-        return view('pages.dashboard', compact('articles'));
+        $article->increment('views');
+
+        return view('articles.show', compact('article'));
     }
 }

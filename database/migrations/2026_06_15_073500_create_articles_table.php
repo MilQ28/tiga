@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('slug');
             $table->text('content');
             $table->enum('status', ['draft', 'published']);
-            $table->integer('views');
+            $table->integer('views')->default(0);
             $table->dateTime('published_at');
             $table->timestamps();
             $table->softDeletes();
