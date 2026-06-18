@@ -2,9 +2,9 @@
 
 @section('content')
     <a href="/">Back?</a>
-    <div class="max-w-6xl mx-auto px-6 py-10">
+    <div class="max-w-7xl mx-auto px-6 py-10">
 
-        <h1 class="text-3xl font-bold mb-6">
+        <h1 class="text-3xl -bolfontd mb-6">
             {{ $article->title }}
         </h1>
 
@@ -12,9 +12,9 @@
 
             <div class="bg-white p-5">
 
-                <p class="text-gray-600 text-sm mb-3">
-                    {{ $article->content }}
-                </p>
+                <article class="text-gray-600 text-sm mb-3 prose prose-lg porse-table:border-2 porse-table:border-black max-w-none min-w-6xl">
+                    {!! $article->content !!}
+                </article>
 
                 <div class="text-xs text-gray-500 mb-3">
                     Views: {{ $article->views }}

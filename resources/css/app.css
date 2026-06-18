@@ -1,4 +1,14 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+@layer base {
+    .prose table,
+    .prose th,
+    .prose td {
+        border-width: 1px;
+        border-style: solid;
+        padding-left: 10px;
+    }
+}
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';

@@ -8,7 +8,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <div>
+    <div class="w-full mx-auto max-w-7xl not-italic">
         @extends('components.header')
     </div>
 

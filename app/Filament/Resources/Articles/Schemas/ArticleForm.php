@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Articles\Schemas;
 
 use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -26,9 +27,8 @@ class ArticleForm
                     ->required()
                     ->maxLength(255),
 
-                Textarea::make('content')
-                    ->required()
-                    ->rows(5),
+                RichEditor::make('content')
+                    ->required(),
 
                 Select::make('status')
                     ->options([
