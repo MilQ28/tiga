@@ -6,14 +6,17 @@
 
 @section('content')
     <div>
-        <h1>Articles</h1>
-        <div>
+        <h1 class="text-xl font-bold">Articles</h1>
+        <div class="grid grid-cols-3 mt-4 mx-auto max-w-7xl">
             @foreach ($articles as $article)
-                <a href="{{ route('articles.show', $article->slug) }}" class="card shadow-sm mb-4">
-                    <div class="card-header">
+                <a href="{{ route('articles.show', $article->slug) }}" class="shadow-sm mb-4 bg-slate-200 max-w-sm rounded-sm p-4">
+                    <div>
                         {{ $article->title }}
                     </div>
-                    <div class="card-body">
+                    <div>
+                        {{{ $article->status }}}
+                    </div>
+                    <div>
                         {{ \Illuminate\Support\Str::limit($article->content, 100) }}
                     </div>
                     <div>

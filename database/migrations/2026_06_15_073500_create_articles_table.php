@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('category_id')->constrained();
             $table->string('title');
+            $table->string('image')->nullable();
             $table->string('slug');
             $table->text('content');
             $table->enum('status', ['draft', 'published']);

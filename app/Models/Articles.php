@@ -25,4 +25,11 @@ class Articles extends Model
     {
         return $this->belongsTo(Categories::class, 'category_id');
     }
+
+    public function scopePublished($query)
+    {
+        $articles = Articles::where('status', 'published')
+            ->latest()
+            ->get();
+    }
 }

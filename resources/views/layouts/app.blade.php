@@ -12,7 +12,7 @@
         @extends('components.header')
     </div>
 
-    <main class="pt-18 min-h-screen">
+    <main class="pt-24 min-h-screen mx-4">
         @yield('content')
     </main>
 
