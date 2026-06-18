@@ -6,9 +6,8 @@ use App\Http\Controllers\GuestController;
 
 Route::get('/', [GuestController::class, 'index'])->name('dashboard');
 
-Route::get('/information', function () {
-    return view('pages.information');
-})->name('information');
+Route::get('/information', [GuestController::class, 'information'])
+    ->name('information');
 
 Route::get('/artikel', function () {
     return view('pages.artikel');

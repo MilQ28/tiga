@@ -8,6 +8,8 @@
             {{ $article->title }}
         </h1>
 
+        <hr>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
             <div class="bg-white p-5">

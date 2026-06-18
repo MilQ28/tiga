@@ -29,7 +29,7 @@ class ArticleForm
 
                 RichEditor::make('content')
                     ->required(),
-
+                    
                 Select::make('status')
                     ->options([
                         'draft' => 'Draft',

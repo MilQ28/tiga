@@ -22,7 +22,7 @@ class ArticleResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Article';
+    protected static ?string $recordTitleAttribute = 'title';
 
     public static function form(Schema $schema): Schema
     {
@@ -37,6 +37,15 @@ class ArticleResource extends Resource
     public static function table(Table $table): Table
     {
         return ArticlesTable::configure($table);
+        
+        return $table
+            ->columns([
+                TextColumn::make('title')
+                    ->searchable(),
+
+                TextColumn::make('content')
+                    ->searchable(),
+            ]);
     }
 
     public static function getRelations(): array
