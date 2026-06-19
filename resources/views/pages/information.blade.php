@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-    <div class="min-h-screen bg-slate-100">
+    <div class="min-h-screen">
 
-        <div class="max-w-7xl mx-auto px-5 py-24">
+        <div class="max-w-7xl mx-auto px-5 pb-12">
 
 
             {{-- Introduction --}}
@@ -158,7 +158,7 @@
                 </p>
 
                 <p class="mt-2">
-                    Email: {{ auth()->user()->email }}
+                    Email: <span>admin@gmail.com</span>
                 </p>
 
             </section>

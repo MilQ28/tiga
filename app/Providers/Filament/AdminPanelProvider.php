@@ -29,10 +29,10 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->brandName('Artikel Hebat')
             ->brandLogo(url('https://bit-jkt.telkomuniversity.ac.id/wp-content/uploads/2023/02/cropped-logo_telkom_university.png'))
-            ->brandLogoHeight('40px')
+            ->brandLogoHeight('80px')
             ->login()
             ->colors([
-                'primary' => Color::Blue,
+                'primary' => Color::Red,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
